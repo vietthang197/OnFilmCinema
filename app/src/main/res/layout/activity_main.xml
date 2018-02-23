@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="tagroup.thangducanh.com.studiobackup.MainActivity"
+                android:orientation="vertical"
+                android:background="#141414">
+
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/txtTenTheLoai12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="true"
+                    android:text="PHIM HÀNH ĐỘNG"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="3dp"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="#FFFFFF"
+                app:title="OnFilm"
+                app:subtitleTextColor="#FF1646"
+                app:subtitle="Xem phim miễn phí"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity="start"
+       android:background="#212121">
+
+   </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
