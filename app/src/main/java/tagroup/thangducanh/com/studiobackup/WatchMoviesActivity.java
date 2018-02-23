@@ -1,6 +1,7 @@
 package tagroup.thangducanh.com.studiobackup;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.net.http.SslError;
@@ -259,7 +260,37 @@ public class WatchMoviesActivity extends AppCompatActivity implements UniversalV
         @Override
         protected void onPostExecute(String s) {
             // nhận link xem phim tại đây
+
             initMedia(s);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mVideoView != null){
+            String package_name = "tagroup.thangducanh.com.studiobackup";
+            SharedPreferences prefs = this.getSharedPreferences(package_name,MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            mVideoView.pause();
+            int point_pause = mVideoView.getCurrentPosition();
+            int point_end = mVideoView.getDuration();
+            editor.putInt("point_pause",point_pause);
+            editor.putInt("point_end",point_end);
+            editor.commit();
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(mVideoView != null){
+            String package_name = "tagroup.thangducanh.com.studiobackup";
+            SharedPreferences prefes = this.getSharedPreferences(package_name,MODE_PRIVATE);
+            int point_start = prefes.getInt("point_pause",0);
+            mVideoView.start();
+            mVideoView.seekTo(point_start);
         }
     }
 

@@ -1,9 +1,13 @@
 package tagroup.thangducanh.com.studiobackup;
 
 import android.app.SearchManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.MenuItemCompat;
@@ -47,6 +51,33 @@ public class MainActivity extends AppCompatActivity{
     private DrawerLayout drawer;
     private SearchView searchView;
 
+    private BroadcastReceiver wifi_receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            if(connectivityManager.getActiveNetworkInfo() !=null){
+                Toast.makeText(getApplicationContext(),"Co ket noi internet",Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(getApplicationContext(),"no internet connection!",Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(wifi_receiver,filter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(wifi_receiver != null){
+            unregisterReceiver(wifi_receiver);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +119,8 @@ public class MainActivity extends AppCompatActivity{
 
         return true;
     }
+
+
 
     private void initData() {
         runOnUiThread(new Runnable() {
