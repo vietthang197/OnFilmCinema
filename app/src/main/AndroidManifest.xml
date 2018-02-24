@@ -3,8 +3,8 @@
     package="tagroup.thangducanh.com.studiobackup">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailMoviesActivity" />
-        <activity android:name=".WatchMoviesActivity"
-            android:configChanges="orientation|screenSize">
-        </activity>
+        <activity
+            android:name=".WatchMoviesActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".SearchFilmActivity"></activity>
     </application>
 
 </manifest>

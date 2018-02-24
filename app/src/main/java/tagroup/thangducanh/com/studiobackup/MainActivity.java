@@ -1,5 +1,6 @@
 package tagroup.thangducanh.com.studiobackup;
 
+import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,6 +26,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.support.v7.widget.SearchView;
 import android.widget.TextView;
@@ -41,7 +43,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
     private RecyclerView recycler_view1,recycler_view2,recycler_view3,recycler_view4,recycler_view5,recycler_view6,recycler_view7,recycler_view8,recycler_view9,recycler_view10,recycler_view11,recycler_view12;
     private TextView[] txtTenTheLoai;
@@ -50,19 +52,46 @@ public class MainActivity extends AppCompatActivity{
     private ActionBarDrawerToggle toggle;
     private DrawerLayout drawer;
     private SearchView searchView;
+    private Dialog dialog_internet_connection =null;
 
     private BroadcastReceiver wifi_receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             if(connectivityManager.getActiveNetworkInfo() !=null){
-                Toast.makeText(getApplicationContext(),"Co ket noi internet",Toast.LENGTH_SHORT).show();
+                if(dialog_internet_connection != null){
+                    dialog_internet_connection.dismiss();
+                    finish();
+                    startActivity(getIntent());
+                }
             }else{
-                Toast.makeText(getApplicationContext(),"no internet connection!",Toast.LENGTH_SHORT).show();
+                if(dialog_internet_connection == null){
+                    dialog_notify_internetconnection();
+                }else{
+                    dialog_internet_connection.show();
+                }
             }
         }
     };
 
+
+    public void dialog_notify_internetconnection(){
+        dialog_internet_connection = new Dialog(this);
+        dialog_internet_connection.setContentView(R.layout.dialog_checking_internet);
+        dialog_internet_connection.setCanceledOnTouchOutside(false);
+
+        Button btn_thoat    = dialog_internet_connection.findViewById(R.id.btn_thoat);
+
+
+        btn_thoat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        dialog_internet_connection.show();
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -116,11 +145,14 @@ public class MainActivity extends AppCompatActivity{
                 searchManager.getSearchableInfo(getComponentName()));
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setBackgroundColor(Color.WHITE);
-
+        searchView.setOnQueryTextListener(this);
         return true;
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 
     private void initData() {
         runOnUiThread(new Runnable() {
@@ -129,7 +161,6 @@ public class MainActivity extends AppCompatActivity{
                 new docJSON().execute("http://35.187.247.104/OnFilm/services/getData.php");
             }
         });
-
     }
 
     private void initView() {
@@ -223,6 +254,20 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        Intent intent = new Intent(getApplicationContext(),SearchFilmActivity.class);
+        intent.putExtra("query",query);
+        startActivity(intent);
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        return false;
+    }
+
+
     class docJSON extends AsyncTask<String,Integer,String>{
 
         @Override
@@ -243,6 +288,8 @@ public class MainActivity extends AppCompatActivity{
                         arrListPhim[i].add(new Phim(obj_phim.getInt("id"),obj_phim.getString("theloai"),obj_phim.getString("link"),obj_phim.getString("tenphim"),obj_phim.getString("iframe")));
                     }
                 }
+
+
                 PhimAdapter phimAdapter0 = new PhimAdapter(arrListPhim[0],getApplicationContext());
                 recycler_view1.setAdapter(phimAdapter0);
 

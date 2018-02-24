@@ -233,7 +233,6 @@
                     android:textSize="18sp"
                     android:textColor="#FFFFFF"
                     android:textAllCaps="true"
-                    android:text="PHIM HÀNH ĐỘNG"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="9dp"
                     android:layout_marginLeft="5dp"/>
