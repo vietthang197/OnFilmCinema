@@ -28,7 +28,7 @@ public class DetailMoviesActivity extends AppCompatActivity {
 
     private ImageView imgPhim,imgPhim2;
     private TextView txtTenPhim;
-    private Button btnXem;
+    private Button btnXem,btnTaixuong,btnBaoCao;
 
     private TextView txtNamThoiluongphim,txtQuocgia,txtDophangiai,txtDaodien,txtDienvien,txtNoidung;
     @Override
@@ -58,6 +58,8 @@ public class DetailMoviesActivity extends AppCompatActivity {
         imgPhim2 = findViewById(R.id.imgPhim2);
         txtTenPhim = findViewById(R.id.txtTenPhim);
         btnXem = findViewById(R.id.btnXem);
+        btnTaixuong = findViewById(R.id.btnTaixuong);
+        btnBaoCao = findViewById(R.id.btnBaoCao);
 
         txtNamThoiluongphim = findViewById(R.id.txtNamThoiluongphim);
         txtQuocgia = findViewById(R.id.txtQuocgia);

@@ -43,7 +43,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener,Constant{
 
     private RecyclerView recycler_view1,recycler_view2,recycler_view3,recycler_view4,recycler_view5,recycler_view6,recycler_view7,recycler_view8,recycler_view9,recycler_view10,recycler_view11,recycler_view12;
     private TextView[] txtTenTheLoai;
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new docJSON().execute("http://35.187.247.104/OnFilm/services/getData.php");
+                new docJSON().execute(Constant.IP_SERVER+"/OnFilm/services/getData.php");
             }
         });
     }
