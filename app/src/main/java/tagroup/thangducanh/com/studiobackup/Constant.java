@@ -5,5 +5,5 @@ package tagroup.thangducanh.com.studiobackup;
  */
 
 public interface Constant {
-    String IP_SERVER = "http://35.187.247.104";
+    String IP_SERVER = "https://onfilm.000webhostapp.com";
 }

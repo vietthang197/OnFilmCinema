@@ -48,8 +48,9 @@ public class PhimAdapter extends RecyclerView.Adapter<PhimAdapter.ViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(context,DetailMoviesActivity.class);
                 int id_phim = arrPhim.get(position).getId();
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                 intent.putExtra("id_phim",id_phim);
-                context.startActivity(intent);
+                context.getApplicationContext().startActivity(intent);
             }
         });
     }

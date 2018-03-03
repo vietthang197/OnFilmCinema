@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new docJSON().execute(Constant.IP_SERVER+"/OnFilm/services/getData.php");
+                new docJSON().execute(IP_SERVER+"/OnFilm/services/getData.php");
             }
         });
     }

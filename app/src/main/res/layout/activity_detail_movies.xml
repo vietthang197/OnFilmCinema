@@ -31,7 +31,6 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/toolbar_transparent"
-                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
         </RelativeLayout>
         <LinearLayout
@@ -59,32 +58,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:textColor="#FFFFFF"
-                    android:text="error"/>
+                    android:textColor="#FFFFFF"/>
                 <TextView
                     android:id="@+id/txtNamThoiluongphim"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:textSize="12sp"
-                    android:textColor="#9E9E9E"
-                    android:text="error"/>
+                    android:textColor="#9E9E9E"/>
                 <TextView
                     android:id="@+id/txtQuocgia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:textSize="12sp"
-                    android:textColor="#9E9E9E"
-                    android:text="error"/>
+                    android:textColor="#9E9E9E"/>
                 <TextView
                     android:id="@+id/txtDophangiai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:textSize="12sp"
-                    android:textColor="#9E9E9E"
-                    android:text="error"/>
+                    android:textColor="#9E9E9E"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -154,8 +149,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#9E9E9E"
                 android:textSize="14sp"
-                android:layout_marginTop="4dp"
-                android:text="error"/>
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -170,8 +164,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:textColor="#9E9E9E"
-                android:textSize="14sp"
-                android:text="error"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -187,8 +180,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="5dp"
                 android:textColor="#9E9E9E"
-                android:textSize="14sp"
-                android:text="error"/>
+                android:textSize="14sp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

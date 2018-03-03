@@ -24,7 +24,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class DetailMoviesActivity extends AppCompatActivity {
+public class DetailMoviesActivity extends AppCompatActivity implements Constant{
 
     private ImageView imgPhim,imgPhim2;
     private TextView txtTenPhim;
@@ -42,7 +42,7 @@ public class DetailMoviesActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new JSON().execute("http://35.187.247.104/OnFilm/services/getItemPhim.php?id_film_request="+id_phim);
+                new JSON().execute(IP_SERVER+"/OnFilm/services/getItemPhim.php?id_film_request="+id_phim);
             }
         });
 
@@ -84,7 +84,7 @@ public class DetailMoviesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DetailMoviesActivity.this,WatchMoviesActivity.class);
                 intent.putExtra("link_phim",p.get$link());
-                String link_comments = "http://35.187.247.104/OnFilm/comments/"+p.get$id();
+                String link_comments = IP_SERVER+"/OnFilm/comments/"+p.get$id();
                 intent.putExtra("link_comments",link_comments);
                 startActivity(intent);
             }

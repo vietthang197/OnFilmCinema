@@ -37,7 +37,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class WatchMoviesActivity extends AppCompatActivity implements UniversalVideoView.VideoViewCallback {
+public class WatchMoviesActivity extends AppCompatActivity implements UniversalVideoView.VideoViewCallback ,Constant{
 
     private UniversalVideoView mVideoView;
     private UniversalMediaController mMediaController;
@@ -62,7 +62,7 @@ public class WatchMoviesActivity extends AppCompatActivity implements UniversalV
 
         Intent intent = getIntent();
         final String link_storage_phim = intent.getStringExtra("link_phim");
-        final String url_phim = "http://35.187.247.104/OnFilm/services/api_get_link_xem_phim.php?link="+link_storage_phim;
+        final String url_phim = IP_SERVER+"/OnFilm/services/api_get_link_xem_phim.php?link="+link_storage_phim;
         postUrl = intent.getStringExtra("link_comments");
         runOnUiThread(new Runnable() {
             @Override
@@ -123,7 +123,7 @@ public class WatchMoviesActivity extends AppCompatActivity implements UniversalV
                 "data-numposts=\"" + NUMBER_OF_COMMENTS + "\" data-order-by=\"reverse_time\">" +
                 "</div> </body> </html>";
 
-        mWebViewComments.loadDataWithBaseURL("http://35.187.247.104/OnFilm/comments/", html, "text/html", "UTF-8", null);
+        mWebViewComments.loadDataWithBaseURL(IP_SERVER+"/OnFilm/comments/", html, "text/html", "UTF-8", null);
         mWebViewComments.setMinimumHeight(200);
     }
 
