@@ -9,7 +9,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="tagroup.thangducanh.com.studiobackup.DetailMoviesActivity"
+        tools:context="tagroup.thangducanh.com.onfilmcinema.DetailMoviesActivity"
         android:orientation="vertical"
         android:background="#090909">
 

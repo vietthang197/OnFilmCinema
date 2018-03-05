@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "tagroup.thangducanh.com.studiobackup"
+        applicationId "tagroup.thangducanh.com.onfilmcinema"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
