@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OnFilm</string>
+    <string name="app_name">On Film</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="search">Tìm kiếm phim</string>
     <string name="title_activity_comments">Comments</string>
