@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "894395503613",
+    "firebase_url": "https://onfilmcinema.firebaseio.com",
+    "project_id": "onfilmcinema",
+    "storage_bucket": "onfilmcinema.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894395503613:android:b7324e5a654aabdd",
+        "android_client_info": {
+          "package_name": "tagroup.thangducanh.com.onfilmcinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894395503613-fbgfmh72g4v69s8mee14i8dnr17nf1h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjBXg5vCunbj9LPdY5i5UGvTM2rWQ_cHQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
